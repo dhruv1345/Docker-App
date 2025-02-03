@@ -1,20 +1,43 @@
 # Dockerized Flask App
 
-This is a simple Flask app Dockerized for easy deployment.
+This is a simple Python Flask application that is Dockerized. It serves as a basic example of how to create a Flask app and containerize it using Docker.
 
 ## Prerequisites
 
-Before running this application, ensure you have the following installed:
+Before running the app, make sure you have the following installed:
 
-- [Docker](https://www.docker.com/get-started)
-- [Python](https://www.python.org/downloads/) (for local development if not using Docker)
+- Docker: [Install Docker](https://docs.docker.com/get-docker/)
+- Python 3.x (for development and local testing)
 
-## Steps to Run the Flask App in Docker
+## Features
 
-1. **Clone this repository**
+- Simple Flask API that returns a "Hello, World!" message.
+- Dockerized application for easy deployment and scaling.
 
-   First, clone the repository to your local machine:
+## Getting Started
 
-   ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
+Follow these steps to get the app running on your local machine.
+
+### 1. Clone the repository
+
+git clone https://github.com/dhruv1345/Docker-App.git
+cd Docker-App
+
+###2. Build the Docker image
+Ensure that Docker is running, then build the Docker image using the following command:
+
+docker build -t flask-docker-app .
+
+###3. Run the Docker container
+Once the image is built, run the container using the following command:
+
+docker run -p 5000:5000 flask-docker-app
+
+This will start the Flask app in the Docker container and map port 5000 on your machine to port 5000 on the container.
+
+###4. Access the app
+You can now access the app by opening your browser and navigating to:
+
+http://localhost:5000
+
+You should see the message: Hello, World!
